@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLA In The News & Investors</title>
+    <style>
+        /* Global Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            color: #1a202c;
+            padding: 60px 20px;
+        }
+
+        /* Section 1: GLA In The News */
+        .news-section {
+            max-width: 1200px;
+            margin: 0 auto 80px auto;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #111827;
+        }
+
+        .section-title span {
+            color: #1d4ed8;
+        }
+
+        /* News Cards Container */
+        .news-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        /* Individual News Card */
+        .news-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            width: 360px;
+            text-align: left;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .news-logo-container {
+            height: 45px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .news-logo {
+            max-height: 40px;
+            max-width: 100%;
+            object-fit: contain;
+            object-position: left;
+        }
+
+        /* Larger size for 2nd and 3rd news logos */
+        .news-card:nth-child(2) .news-logo-container,
+        .news-card:nth-child(3) .news-logo-container {
+            height: 65px;
+        }
+
+        .news-card:nth-child(2) .news-logo,
+        .news-card:nth-child(3) .news-logo {
+            max-height: 60px;
+        }
+
+        .news-date {
+            font-size: 13px;
+            color: #2563eb;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .news-headline {
+            font-size: 16px;
+            font-weight: bold;
+            color: #111827;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .news-desc {
+            font-size: 13px;
+            color: #4b5563;
+            line-height: 1.6;
+        }
+
+        /* See More Button */
+        .see-more-btn {
+            display: inline-block;
+            background-color: transparent;
+            border: 1px solid #fca5a5;
+            color: #dc2626;
+            padding: 10px 25px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: bold;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            transition: background-color 0.2s;
+        }
+
+        .see-more-btn:hover {
+            background-color: #fef2f2;
+        }
+
+        /* Section 2: Our Investors */
+        .investors-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .investors-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* Investor Card */
+        .investor-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 25px 30px;
+            width: 360px;
+            height: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .investor-logo {
+            max-height: 45px;
+            max-width: 80%;
+            object-fit: contain;
+        }
+
+        /* Larger size for 2nd and 3rd investor logos */
+        .investor-card:nth-child(2) .investor-logo,
+        .investor-card:nth-child(3) .investor-logo {
+            max-height: 75px;
+            max-width: 95%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- GLA In The News Section -->
+    <section class="news-section">
+        <h2 class="section-title"><span>GLA</span> In The News</h2>
+        
+        <div class="news-container">
+            <!-- News Card 1 -->
+            <div class="news-card">
+                <div>
+                    <div class="news-logo-container">
+                        <img src="https://www.pngitem.com/pimgs/m/402-4022982_et-transparent-the-economic-times-logo-hd-png.png" alt="The Economic Times" class="news-logo">
+                    </div>
+                    <div class="news-date">21 Dec 2021</div>
+                    <div class="news-headline">Edtech startup GLA University acquires data analytics firm Prepleaf for $1 million.</div>
+                    <p class="news-desc">With their latest acquisition, GLA University moves one step closer to becoming...</p>
+                </div>
+            </div>
+
+            <!-- News Card 2 -->
+            <div class="news-card">
+                <div>
+                    <div class="news-logo-container">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ88VHzZ9P-TiYVGybo8x29jF6KAX7TGb_6tuMbOmW7Y737jAehCPUeG3GO&s=10" alt="Moneycontrol" class="news-logo">
+                    </div>
+                    <div class="news-date">26 Oct 2021</div>
+                    <div class="news-headline">Kunal Shah, Vijay Shekhar Sharma, Amrish Rau among 21 angel investors in GLA University</div>
+                    <p class="news-desc">GLA University is aiming to expand to 20 smaller cities by March 2022 and...</p>
+                </div>
+            </div>
+
+            <!-- News Card 3 -->
+            <div class="news-card">
+                <div>
+                    <div class="news-logo-container">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoAcPsDDogEO4SKHQ_WZ8HQoz2zoSYkSVAMejxg0RfP34UlFKkp84m5_Y&s=10" alt="VCCircle" class="news-logo">
+                    </div>
+                    <div class="news-date">18 Aug 2020</div>
+                    <div class="news-headline">Unitus Ventures leads pre-Series A funding for coding-focussed GLA University</div>
+                    <p class="news-desc">Software coding platform GLA University has raised $2.5 million (Rs 18.6 crore) in...</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="see-more-btn">SEE MORE &gt;</a>
+    </section>
+
+    <!-- Our Investors Section -->
+    <section class="investors-section">
+        <h2 class="section-title">Our Investors, Who Believe In Us</h2>
+        
+        <div class="investors-container">
+            <!-- Investor 1 -->
+            <div class="investor-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOmJPdxP5o76uVjRWX3DYKL4kldnqEl7STXGUyfPXY&s=10" alt="Unitus Ventures" class="investor-logo">
+            </div>
+
+            <!-- Investor 2 -->
+            <div class="investor-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGg_Uel02_k5lZs_pLkteJ8Sqv0TGiayRZqLHpgBjYWg&s=10" alt="Omidyar Network India" class="investor-logo">
+            </div>
+
+            <!-- Investor 3 -->
+            <div class="investor-card">
+                <img src="https://img-cdn.publive.online/fit-in/1200x675/entrackr/media/post_attachments/wp-content/uploads/2021/02/India-Quotient-.jpg" alt="IndiaQuotient" class="investor-logo">
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: #ffffff;
+        }
+
+        .navigation {
+            background-color: #ffff00;
+            color: #000000;
+            font-size: 32px;
+            padding: 15px 20px;
+            width: 100%;
+        }
+
+        .content-container {
+            display: flex;
+            flex: 1;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .box {
+            padding: 15px;
+            font-size: 18px;
+            color: #444444;
+            flex: 1;
+        }
+
+        .left-box {
+            background-color: #ff0000;
+        }
+
+        .right-box {
+            background-color: #00ff00;
+        }
+
+        @media screen and (max-width: 768px) {
+            .content-container {
+                flex-direction: column;
+            }
+
+            .navigation {
+                font-size: 28px;
+                padding: 12px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navigation">
+        Navigation
+    </header>
+
+    <main class="content-container">
+        <div class="box left-box">
+            LEFT BOX
+        </div>
+        <div class="box right-box">
+            RIGHT BOX
+        </div>
+    </main>
+
+</body>
+</html>

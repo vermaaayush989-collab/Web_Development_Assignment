@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms & Suits</title>
+    <style>
+        /* ==========================================
+           1. BOX MODEL (Reset & Base Styles)
+           ========================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Standard Box Model property */
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #ffffff;
+            color: #333333;
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .rooms-section {
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        /* ==========================================
+           2. CSS COMBINATORS & SECTION HEADER
+           ========================================== */
+        
+        /* Child Combinator (>) */
+        .rooms-section > .header-container {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 50px auto; /* Box Model: margin */
+            padding: 0 15px;          /* Box Model: padding */
+        }
+
+        /* Descendant Combinator (space) */
+        .header-container h2 {
+            font-size: 46px;
+            color: #c2994b; /* Gold/Bronze heading color */
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Adjacent Sibling Combinator (+) */
+        .header-container h2 + p {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #6c757d;
+            line-height: 1.8;
+        }
+
+        /* ==========================================
+           3. FLEXBOX LAYOUT (Large Screens - Default)
+           ========================================== */
+        .rooms-grid {
+            display: flex;            /* Flexbox container */
+            flex-wrap: wrap;          /* Allows flex items to wrap for media queries */
+            justify-content: center;  /* Center flex items */
+            gap: 30px;                /* Gap between flex cards */
+        }
+
+        /* Child Combinator (>) & Flex Item sizing for Large Screens (3 per row) */
+        .rooms-grid > .room-card {
+            flex: 1 1 calc(33.333% - 30px); /* 3 cards per row */
+            max-width: 360px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .card-image-wrapper {
+            width: 100%;
+            height: 230px;
+            overflow: hidden;
+        }
+
+        /* Descendant Combinator */
+        .card-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-body {
+            padding: 25px 10px; /* Box Model: padding */
+        }
+
+        /* Descendant Combinator */
+        .card-body .room-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+        }
+
+        /* Adjacent Sibling Combinator (+) */
+        .room-title + .room-price {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            color: #e3b04b; /* Gold accent price color */
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* ==========================================
+           4. MEDIA QUERIES
+           ========================================== */
+
+        /* Medium Screens (Tablets: max-width 992px) -> 2 cards per row */
+        @media screen and (max-width: 992px) {
+            .rooms-grid > .room-card {
+                flex: 1 1 calc(50% - 30px); /* 2 cards per row */
+                max-width: 450px;
+            }
+        }
+
+        /* Small Screens (Mobiles: max-width 600px) -> 1 card per row */
+        @media screen and (max-width: 600px) {
+            .rooms-grid > .room-card {
+                flex: 1 1 100%; /* 1 card per row */
+                max-width: 100%;
+            }
+
+            .header-container h2 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="rooms-section">
+        <!-- Header Container -->
+        <div class="header-container">
+            <h2>Rooms & Suits</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+        </div>
+
+        <!-- Rooms Grid Container (Flexbox) -->
+        <div class="rooms-grid">
+            <!-- Card 1: Single Room -->
+            <div class="room-card">
+                <div class="card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80" alt="Single Room">
+                </div>
+                <div class="card-body">
+                    <h3 class="room-title">Single Room</h3>
+                    <p class="room-price">90000 Rs / PER NIGHT</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Family Room -->
+            <div class="room-card">
+                <div class="card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Family Room">
+                </div>
+                <div class="card-body">
+                    <h3 class="room-title">Family Room</h3>
+                    <p class="room-price">120000 Rs / PER NIGHT</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Presidential Room -->
+            <div class="room-card">
+                <div class="card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" alt="Presidential Room">
+                </div>
+                <div class="card-body">
+                    <h3 class="room-title">Presidential Room</h3>
+                    <p class="room-price">250000 Rs / PER NIGHT</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
