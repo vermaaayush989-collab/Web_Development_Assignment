@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Course Enrollment</title>
+</head>
+
+<body>
+
+<h1><u>PHYSICS WALLAH COURSE ENROLLMENT</u></h1>
+
+<p>
+    <strong>Welcome to the Physics Wallah (PW) Online Learning Platform!</strong><br>
+    Register yourself to enroll in a technical course and begin your learning journey.
+</p>
+
+<hr>
+
+<form action="post">
+
+    <h2>Student Account Information</h2>
+
+    <label for="name"><strong>Full Name:</strong></label><br>
+    <input 
+        type="text" 
+        id="name" 
+        name="name"
+        placeholder="Enter your full name"
+        required
+        minlength="3"
+        maxlength="50">
+    <br><br>
+
+    <label for="email"><strong>Email Address:</strong></label><br>
+    <input 
+        type="email" 
+        id="email" 
+        name="email"
+        placeholder="example@gmail.com"
+        required>
+    <br><br>
+
+    <label for="password"><strong>Password:</strong></label><br>
+    <input 
+        type="password" 
+        id="password" 
+        name="password"
+        placeholder="Create a password"
+        required
+        minlength="8"
+        maxlength="20"
+
+    <br><br>
+
+    <label for="mobile"><strong>Mobile Number:</strong></label><br>
+    <input 
+        type="tel" 
+        id="mobile" 
+        name="mobile"
+        placeholder="Enter 10 digit mobile number"
+        required
+        pattern="[0-9]{10}"
+        minlength="10"
+        maxlength="10">
+    <br><br>
+
+    <label for="dob"><strong>Date of Birth:</strong></label><br>
+    <input 
+        type="date" 
+        id="dob" 
+        name="dob"
+        required>
+    <br><br>
+
+    <hr>
+
+    <h2>Course Enrollment</h2>
+
+    <label for="course"><strong>Select Your Course:</strong></label><br>
+    <select id="course" name="course" required>
+        <option value="">-- Select a Course --</option>
+        <option value="java">Java Programming</option>
+        <option value="python">Python Programming</option>
+        <option value="web">Web Development</option>
+        <option value="dsa">Data Structures & Algorithms</option>
+        <option value="database">Database Management</option>
+        <option value="ai">Artificial Intelligence</option>
+        <option value="ml">Machine Learning</option>
+    </select>
+
+    <br><br>
+
+    <label for="batch"><strong>Select Batch / Session:</strong></label><br>
+    <select id="batch" name="batch" required>
+        <option value="">-- Select Batch --</option>
+        <option value="morning">Morning - 8:00 AM to 10:00 AM</option>
+        <option value="afternoon">Afternoon - 12:00 PM to 2:00 PM</option>
+        <option value="evening">Evening - 5:00 PM to 7:00 PM</option>
+        <option value="night">Night - 8:00 PM to 10:00 PM</option>
+        <option value="weekend">Weekend Session</option>
+    </select>
+
+    <br><br>
+
+    <strong>Preferred Learning Mode:</strong><br>
+
+    <input 
+        type="radio" 
+        id="online" 
+        name="learning_mode"
+        value="online"
+        required>
+    <label for="online">Online</label>
+
+    <input 
+        type="radio" 
+        id="offline" 
+        name="learning_mode"
+        value="offline">
+    <label for="offline">Offline</label>
+
+    <input 
+        type="radio" 
+        id="hybrid" 
+        name="learning_mode"
+        value="hybrid">
+    <label for="hybrid">Hybrid</label>
+
+    <br><br>
+
+    <hr>
+
+    <h2>Areas of Interest</h2>
+
+    <p><strong>Select the topics you are interested in:</strong></p>
+
+    <input 
+        type="checkbox" 
+        id="javaInterest" 
+        name="interest"
+        value="java">
+    <label for="javaInterest">Java</label>
+    <br>
+
+    <input 
+        type="checkbox" 
+        id="pythonInterest" 
+        name="interest"
+        value="python">
+    <label for="pythonInterest">Python</label>
+    <br>
+
+    <input 
+        type="checkbox" 
+        id="webInterest" 
+        name="interest"
+        value="web">
+    <label for="webInterest">Web Development</label>
+    <br>
+
+    <input 
+        type="checkbox" 
+        id="dsaInterest" 
+        name="interest"
+        value="dsa">
+    <label for="dsaInterest">Data Structures</label>
+    <br>
+
+    <input 
+        type="checkbox" 
+        id="databaseInterest" 
+        name="interest"
+        value="database">
+    <label for="databaseInterest">Database</label>
+
+    <br><br>
+
+    <hr>
+
+    <h2>Educational Background</h2>
+
+    <label for="education"><strong>Education Level:</strong></label><br>
+    <select id="education" name="education" required>
+        <option value="">-- Select Education Level --</option>
+        <option value="12th">12th / Higher Secondary</option>
+        <option value="diploma">Diploma</option>
+        <option value="undergraduate">Undergraduate</option>
+        <option value="postgraduate">Postgraduate</option>
+        <option value="other">Other</option>
+    </select>
+
+    <br><br>
+
+    <label for="college"><strong>College / Institution:</strong></label><br>
+    <input 
+        type="text" 
+        id="college" 
+        name="college"
+        placeholder="Enter your college or institution"
+        required
+        minlength="3"
+        maxlength="100">
+    <br><br>
+
+    <label for="semester"><strong>Current Semester / Year:</strong></label><br>
+    <input 
+        type="text" 
+        id="semester" 
+        name="semester"
+        placeholder="Example: 3rd Semester / 2nd Year"
+        required
+        maxlength="30">
+    <br><br>
+
+    <label for="experience">
+        <strong>Programming Experience (Years):</strong>
+    </label><br>
+
+    <input 
+        type="number"
+        id="experience"
+        name="experience"
+        min="0"
+        max="20"
+        step="0.5"
+        placeholder="0 to 20 years"
+        required>
+
+    <br><br>
+
+    <label for="github">
+        <strong>GitHub / Portfolio URL:</strong>
+    </label><br>
+
+    <input 
+        type="url"
+        id="github"
+        name="github"
+        placeholder="https://github.com/username">
+
+    <br><br>
+
+    <hr>
+
+    <h2>Learning Goals</h2>
+
+    <label for="goals">
+        <strong>Tell us about your learning goals:</strong>
+    </label><br>
+
+    <textarea
+        id="goals"
+        name="goals"
+        rows="6"
+        cols="50"
+        placeholder="Describe what you want to learn and achieve from this course..."
+        required
+        minlength="20"
+        maxlength="500"></textarea>
+
+    <br><br>
+
+    <hr>
+
+    <h2>Confirmation</h2>
+
+    <input 
+        type="checkbox"
+        id="confirm"
+        name="confirm"
+        value="yes"
+        required>
+
+    <label for="confirm">
+        <strong>
+            I confirm that the information provided by me is correct
+            and I agree to the course enrollment terms.
+        </strong>
+    </label>
+
+    <br><br>
+
+    <input type="submit" value="Submit Registration">
+    <input type="reset" value="Reset Form">
+
+    <br><br>
+
+
+    <a href="https://www.pw.live/" target="_blank">create account at pw website and start your coding journey</a>
+
+</form>
+
+</body>
+</html>
